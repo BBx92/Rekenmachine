@@ -21,3 +21,7 @@ test('delen', () => {
 test('delen door nul geeft een fout', () => {
   assert.throws(() => bereken(8, '/', 0));
 });
+
+test('Optellen van kommagetallen geeft een floating point', () => {
+  assert.strictEqual(bereken(0.1, '+', 0.2), 0.3);
+});
