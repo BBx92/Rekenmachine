@@ -1,0 +1,21 @@
+{
+  "name": "rekenmachine",
+  "version": "1.0.0",
+  "description": "E-Learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBx92/Rekenmachine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BBx92/Rekenmachine/issues"
+  },
+  "homepage": "https://github.com/BBx92/Rekenmachine#readme"
+}
