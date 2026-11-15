@@ -45,6 +45,6 @@ button {
 
 button:hover { filter: brightness(1.15); }
 
-.operator { background: #f0932b; }
+.operator { background: #2f9e8f; }
 .breed-2 { grid-column: span 2; }
 .breed-3 { grid-column: span 3; }
