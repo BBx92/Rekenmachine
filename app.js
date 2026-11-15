@@ -29,6 +29,7 @@ function kiesKomma() {
 
 function kiesOperator(op) {
   if (operator !== null && !nieuwGetal) rekenUit();
+  if (huidig === 'Fout') return;
   vorig = parseFloat(huidig);
   operator = op;
   nieuwGetal = true;
@@ -36,9 +37,15 @@ function kiesOperator(op) {
 
 function rekenUit() {
   if (operator === null) return;
-  huidig = String(bereken(vorig, operator, parseFloat(huidig)));
-  operator = null;
-  nieuwGetal = true;
+  try {
+    huidig = String(bereken(vorig, operator, parseFloat(huidig)));
+    operator = null;
+    nieuwGetal = true;
+  } catch (fout) {
+    wis();
+    huidig = 'Fout';
+    nieuwGetal = true;
+  }
 }
 
 function wis() {
