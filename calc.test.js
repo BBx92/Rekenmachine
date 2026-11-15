@@ -17,3 +17,7 @@ test('vermenigvuldigen', () => {
 test('delen', () => {
   assert.strictEqual(bereken(9, '/', 3), 3);
 });
+
+test('delen door nul geeft een fout', () => {
+  assert.throws(() => bereken(8, '/', 0));
+});

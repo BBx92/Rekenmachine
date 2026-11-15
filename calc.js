@@ -1,4 +1,7 @@
 function bereken(a, operator, b) {
+  if (operator === '/' && b === 0) {
+  throw new Error('Delen door nul');
+  }
   switch (operator) {
     case '+': return a + b;
     case '-': return a - b;
