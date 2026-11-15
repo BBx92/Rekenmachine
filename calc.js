@@ -1,14 +1,16 @@
 function bereken(a, operator, b) {
   if (operator === '/' && b === 0) {
-  throw new Error('Delen door nul');
+    throw new Error('Delen door nul');
   }
+  let uitkomst;
   switch (operator) {
-    case '+': return a + b;
-    case '-': return a - b;
-    case '*': return a * b;
-    case '/': return a / b;
+    case '+': uitkomst = a + b; break;
+    case '-': uitkomst = a - b; break;
+    case '*': uitkomst = a * b; break;
+    case '/': uitkomst = a / b; break;
     default: throw new Error('Onbekende operator: ' + operator);
   }
+  return Math.round(uitkomst * 1e10) / 1e10;
 }
 
 // Maakt de functie ook beschikbaar voor tests in Node.
